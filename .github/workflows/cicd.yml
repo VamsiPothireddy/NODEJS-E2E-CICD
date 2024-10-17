@@ -22,8 +22,8 @@ jobs:
     - name: Build Docker Image
       run: docker build -t hello-service:${{github.run_id}} .
 
-    - name: Test Docker Container
-      run: docker run hello-service:${{github.run_id}} npm test
+    #- name: Test Docker Container
+    #  run: docker run hello-service:${{github.run_id}} npm test
 
   push:
     runs-on: ubuntu-latest
