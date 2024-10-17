@@ -4,14 +4,14 @@ FROM node:16-alpine as build
 # Set the working directory inside the container
 WORKDIR /usr/src/app
 
-# Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+# Copy package.json and package-lock.json from the hello-service directory to the working directory
+COPY hello-service/package*.json ./
 
 # Install only production dependencies
 RUN npm install --production
 
 # Copy the rest of the application code to the container
-COPY . .
+COPY hello-service/. .
 
 # Stage 2: Production Stage (Distroless)
 FROM gcr.io/distroless/nodejs:16
