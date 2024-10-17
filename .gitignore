@@ -1,0 +1,47 @@
+# Node modules
+node_modules/
+npm-debug.log
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+.yarn
+
+# dotenv environment variable files
+.env
+.env.test
+.env.production
+.env.local
+.env.*.local
+
+# Build files (if your project builds artifacts)
+dist/
+build/
+.out/
+
+# Coverage directory used by tools like jest
+coverage/
+
+# Temporary folders like cache or tmp
+tmp/
+temp/
+.cache/
+
+# IDE/Editor specific
+.vscode/
+.idea/
+
+# Operating system specific files
+.DS_Store
+Thumbs.db
+
+# Ignore any
