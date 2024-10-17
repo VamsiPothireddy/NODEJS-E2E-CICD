@@ -65,7 +65,11 @@ jobs:
 
     - name: Update tag in Helm chart
       run: |
+        IMAGE_REPO="${{ secrets.DOCKERHUB_USERNAME }}/hello-service"
         sed -i 's/tag: .*/tag: "${{github.run_id}}"/' nodejs-services/nodejs-services/values.yaml
+        sed -i 's/appName: .*/appName: hello-service/' nodejs-services/nodejs-services/values.yaml
+        sed -i 's|repository: .*|repository: '"$IMAGE_REPO"'|' nodejs-services/nodejs-services/values.yaml
+        sed -i 's/replicaCount: .*/replicaCount: 2/' nodejs-services/nodejs-services/values.yaml
         
 
     - name: Commit and push changes
