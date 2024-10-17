@@ -60,6 +60,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
+        repository: VamsiPothireddy/helm-charts  
         token: ${{ secrets.TOKEN }}
 
     - name: Update tag in Helm chart
