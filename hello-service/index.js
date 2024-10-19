@@ -9,7 +9,7 @@ app.use(express.json());
 app.get('/hello', (req, res) => {
     // Get the name from the query parameters, e.g., /hello?name=Meghana
     const name = req.query.name || 'World';  // Default to 'World' if no name is provided
-    res.send(`Hello Hi, ${name}!`);
+    res.send(`Hi Good Morning, ${name}!`);
 });
 
 // Start the server on port 3000
